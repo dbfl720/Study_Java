@@ -1,4 +1,4 @@
-# Study_Java0
+# Study_Java
 
 - By 혼자 공부하는 자바 (Chanpter 11-1, 객체 비교(equals())
 - public boolean equals(Object obj) {…}
