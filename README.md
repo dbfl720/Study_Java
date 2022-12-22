@@ -7,7 +7,7 @@
 
 
 
-# Study_Java_정보(toString())
+# Study_Java_객체 문자 정보(toString())
 
 - toString() 메소드는 객체의 문자 정보를 리턴합니다. 객체의 문자 정보란 객체의 문자열을 표현한 값을 말합니다.
 - Object 클래스의 toString() 메소드는 '클래스이름 @16진수해시코드'로 구성된 문자 정보를 리턴합니다. 
