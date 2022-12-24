@@ -23,3 +23,9 @@
 - 문자 (char, String)
 - 논리 (boolean)
 
+
+# 문자열 결합
+
+- 숫자 뿐만 아니라 두 문자열을 하칠 때도 덧셈을 사용할 수 있다.
+- String name = "Ja" + "va";
+- String str = name + 8.0;
