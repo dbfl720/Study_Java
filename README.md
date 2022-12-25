@@ -29,3 +29,8 @@
 - 숫자 뿐만 아니라 두 문자열을 하칠 때도 덧셈을 사용할 수 있다.
 - String name = "Ja" + "va";
 - String str = name + 8.0;
+
+
+
+# 기본형의 종류와 범위
+![993908415A96665E19](https://user-images.githubusercontent.com/116433637/209466751-5766f16d-39d5-440e-9c64-e6fe964749ab.jpeg)
