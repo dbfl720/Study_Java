@@ -34,3 +34,12 @@
 
 # 기본형의 종류와 범위
 ![993908415A96665E19](https://user-images.githubusercontent.com/116433637/209466751-5766f16d-39d5-440e-9c64-e6fe964749ab.jpeg)
+
+
+# 화면으로부터 입력 받기
+1. import java.util.Scanner;   //Scanner 클래스를 사용하기 위해 추가
+2. Scanner scanner = new Scanner(System.in);   // Scanner 클래스의 객체를 생성
+3. String input = scanner.nextline();
+   int num = Integer.parseInt(input);  // Intege.parseInt()메서드를 이용해서 문자열을 int 타입의 정수로 변환
+   
+   int num = scanner.nextInt();  // 정수를 입력받아서 변수 num에 저장
