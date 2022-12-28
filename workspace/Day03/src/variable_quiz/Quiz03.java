@@ -41,7 +41,7 @@ public class Quiz03 {
 //		System.out.print("1~10 사이의 수를 입력하세요 : ");
 //		int digits = scan.nextInt();
 //		
-//		if (digits < 1 || digits > 10) {
+//		if (digits < 1 || digits > 10) {     //둘다 만족할 수 없기 때문에 '또는'으로 접근
 //			System.out.println("잘못 입력하셨습니다.");
 //		}
 //		
