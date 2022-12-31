@@ -62,8 +62,8 @@
 
 # for문
 - for (초기화;조건식;증감식) {
-   // 조건식이 참(true)인 동안 수행될 문장들을 적는다.
-   }
+-  // 조건식이 참(true)인 동안 수행될 문장들을 적는다.
+-   }
    
    ![다운로드](https://user-images.githubusercontent.com/116433637/210136590-80993c47-ed6c-442f-b9b0-acd1007cb01f.jpeg)
 
