@@ -79,14 +79,3 @@
 
 
 
-# 반복문을 통한 2차원 배열 접근
-- 2차원 배열이므로 중첩 반복문이 효율적이다.
-- for (int i = 0; i < scores.length; i++) {  // 배열의 개수 만큼 반복(행)
--    int sum = 0;
--    for (int j = 0; j < scores[i].length; j++) {  // 1차원 배열 내의 개수 만큼 반복(열)
--        sum += scores[i][j];
--    }
--
--    System.out.println("평균 점수는 " + sum / 10.0);
-- }
-
