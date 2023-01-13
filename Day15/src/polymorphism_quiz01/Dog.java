@@ -1,14 +1,15 @@
-package polymorphism_ex01;
+package polymorphism_quiz01;
 
-// 자식
 public class Dog extends Animal{
 	
 	@Override
 	public void cry() {
 		System.out.println("멍멍");
+	
 	}
 	
 	public void lash() {
-		System.out.println("꼬리치기");
+		System.out.println("꼬리 흔들흔들");
 	}
+
 }

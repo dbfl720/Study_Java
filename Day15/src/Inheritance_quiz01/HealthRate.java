@@ -15,6 +15,7 @@ public class HealthRate extends HealthInfo{
 		
 		// 상속을 받는 자식클래스의 객체를 생성할 때 부모생성자가 먼저 호출되고 
 		// 자식 생성자가 그 다음에 호출된다. ex) 응애 , 학생입니다.
+		
 		// 임의로 부모생성자를 불러주지 않으면, 부모의 기본생성자를 호출하려고 시도한다.
 		// 그런데 없었기 때문에, 에러가 발생했고, 
 		// 3개의 파라미터가 있는 부모생성자를 임의로 호출했다.
@@ -34,7 +35,7 @@ public class HealthRate extends HealthInfo{
 	 
 
      //비만도: B(%)=(W-SW)/SW * 100   // input: x  , output: double
-	 public double getRate() {	  // 같은 클래스 내에서 메소드 사용 가능.
+	 public double getRate() {	  // 같은 클래스 내에서 다른 메소드 사용 가능.
 		 return (super.height - sw()) / sw() * 100;
 		 
 	 }
@@ -45,20 +46,20 @@ public class HealthRate extends HealthInfo{
 	 // 비만 여부 메소드   // input: x    //output : String
 	 //(비만도가 10% 미만이면 정상, 10%이상 20% 미만이면 과체중, 20% 이상은 비만)
 	 private String status() {     // !! 메소드도 private 할 수 있다!!   // 그대신에 클래스 내부에서만 사용 가능.
-		 double rate = getRate();
-		 if (rate < 10) { // 10 미만
+//		 double rate = getRate();
+		 if (getRate() < 10) { // 10 미만
 			 return "정상";
-		 } else if (rate < 20) {  // 10 ~ 20미만 
+		 } else if (getRate() < 20) {  // 10 ~ 20미만 
 			 return "과체중";
 		 } else { // 20이상
 		    return "비만";
 		 }
  		}
 	 
-	 @Override
-	 public void showInfo() {
-		 super.showInfo();
-		 System.out.println("=> " + status());
+	 @Override  // 메소드의  내용을 새로 작성하는 것. 
+	 public void showInfo() {  // 메소드명, 매개변수, 반환타입 모두 동일하게 해야한다.!
+		 super.showInfo(); // 부모클래스에 있는 showInfo()의 정보를 부른다. 
+		 System.out.println("=> " + status());  // 추가적으로 status도 부른다.
 	 }
 	 
 	 
