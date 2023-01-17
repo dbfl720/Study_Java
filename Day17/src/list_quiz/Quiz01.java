@@ -39,7 +39,7 @@ public class Quiz01 {
 		
 		
 		
-		// 수정 가능한 리스트로 변경! 
+		// 수정 가능한 리스트로 변경!!!!!!!
 		List<Integer> list3 = new ArrayList<>(Arrays.asList(3, 8, 9, 4, 2, 1, 7, 5));
 		System.out.println(list3);
 //		list3.add(100);
@@ -65,6 +65,7 @@ public class Quiz01 {
 //
 //		[3, 9, 6, 2, 1, 5]
 		
+		// index로 삭제
 		list1.remove(1);
 		list1.remove(5);
 		System.out.println(list1);

@@ -13,7 +13,7 @@ public class Quiz02 {
 
 //		List<Integer> list = Arrays.asList(20, 3, 5, 84, 17);
 //		System.out.println(list);
-		
+//		
 		
 		List<Integer> list = new ArrayList<>();
 		list.add(20);
@@ -30,7 +30,7 @@ public class Quiz02 {
 //		for문을 사용하세요.(향상된 for문 X)
 //		출력 예시
 //
-//		3
+//		2
 //		int min = list.get(0);
 //		for (int i = 1; i < list.size(); i++) {  // 1 ~ 4
 //			if(min > list.get(i)) {
@@ -53,9 +53,9 @@ public class Quiz02 {
 		Iterator<Integer> iter = list.iterator();
 		int sum = 0;
 		while (iter.hasNext()) { // 가리키는게 있는 동안.. 없을 때 끝남.
-			Integer value = iter.next();
-			sum += value;
-			// sum += iter.next();
+//			Integer value = iter.next();
+//			sum += value;
+			 sum += iter.next();
 		}
 		System.out.println(sum);
 	}

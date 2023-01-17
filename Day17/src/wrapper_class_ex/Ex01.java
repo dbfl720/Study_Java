@@ -21,8 +21,11 @@ public class Ex01 {
 		System.out.println(n1 == n2);  // == 는 stack의 값 비교임. // true
 		System.out.println(n1 == n3);  // 한쪽이 기본자료형이면 무조건 값 비교로 됨. // ture
 		System.out.println(n2 == n3);  // 참조형 자료형은 주소를 비교하는 것이라서 같지 않음. new는 새로운 메모. // false
-		System.out.println(n2 == n4);  // true // new가 없어서  constant pool에 쌓임. // 주소 비교임. 값 비교 아님. 
+		System.out.println(n2 == n4);  // true // new가 없어서  constant pool에 쌓임. // 주소 비교임. 값 비교 아님. // 즉 constant pool에 저장된 값의 주소 비교 
 		System.out.println(n2.equals(n3)); // true // 값 비교
+		
+		// 객체들 : n1, n2, n3, n4 
+		// 값 : 5....
 	}
 
 }

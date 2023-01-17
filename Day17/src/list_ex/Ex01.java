@@ -40,14 +40,14 @@ public class Ex01 {
 
 		
 		// 요소 수정하기
-		// 요소 첫번째 값을 수정 1- -> 100
+		// 요소 첫번째 값을 수정 10 -> 100
 		System.out.println(list2.set(0, 100)); // <왼쪽>변경할 위치(index), <오른쪽>변경할 값, 리턴된 값은 삭제된 값.
 		System.out.println("list2: " + list2);
 		
 		// 요소 삭제하기
 		Integer deleted = list2.remove(1); // index 1위치의 값을 제거
 		Integer value = 100;
-		list2.remove(value);  // object로 인식해서 제거 된 것임.
+		list2.remove(value);  // object로 인식해서 값 100이 제거 된 것임.
 		System.out.println("deleted: " + deleted);
 		System.out.println("list2 : " + list2);
 		
