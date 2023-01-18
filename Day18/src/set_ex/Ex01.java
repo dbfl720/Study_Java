@@ -1,7 +1,9 @@
 package set_ex;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class Ex01 {
 
@@ -33,7 +35,28 @@ public class Ex01 {
 		System.out.println("set - set1 : "+ set2);
 		
 		
+		// Tree set
+		Set<String> set3 = new TreeSet<>();
+		set3.add("c");
+		set3.add("b");
+		set3.add("a");
+		System.out.println("set3 : " + set3);  // 알아서 정렬해줌.
 		
+		
+		
+		// 반복문: 순서가 없기 때문에 일반 for문 순회는 못함
+		
+		// 1. Iterator    
+		Iterator<String> iter = set3.iterator();
+		while (iter.hasNext()) {
+			String element = iter.next();
+			System.out.println(element);
+		}
+		
+		// 2. 향상된 for문
+		for (Integer element : set1) {
+			System.out.println(element);  // 넣은 순서가 아니고, 자기 멋대로 순서 나옴.
+		}
 	}
 
 }
