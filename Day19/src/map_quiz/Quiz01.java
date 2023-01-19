@@ -51,6 +51,9 @@ public class Quiz01 {
     
     
     
+    
+    
+    
 	public static void main(String[] args) {
 		
 		Random rand = new Random();		
@@ -59,11 +62,10 @@ public class Quiz01 {
 		
 		
 			// 5문제 랜덤 0~19
-		    // set -> list
-		
-		 Set<String> keys = capitalMap.keySet();  // 인덱스 번호 없음
-		 List<String> keyList = new ArrayList<>(keys);  // 인덱스 번호 있음  0 ~ 19
-		 
+		    // set -> list		
+		 Set<String> keys = capitalMap.keySet();  // 인덱스 번호 없음 // keySet으로 키를 얻음!!!!!
+		 List<String> keyList = new ArrayList<>(keys);  // 인덱스 번호 있음  0 ~ 19 // 이 식으로 문제를 내는 것임. 인덱스 번호로 해서 for문 돌게하려고. // 위에 keys를 여기에 담음.
+		 // captialMap의 키를 갖고 있음!!!!. : keyList(리스트). : 나라.
 		 
 		 
 		 // 중복검사
@@ -72,24 +74,24 @@ public class Quiz01 {
 		int score = 0;
 		for (int i = 0; i < 5; i++) {		 
 			 // ***선생님
-			 int randIndex = rand.nextInt(keyList.size());	// 0 ~ 29 => 20
+			 int randIndex = rand.nextInt(keyList.size());	// 0 ~ 19 => 20 , 배열에 담기!!  // randIndex : capitalMap 키를 갖고 있음!!!! 
 			
 			 // 중복검사
-			 if (quizIndex.contains(randIndex)) { // 중복
+			 if (quizIndex.contains(randIndex)) { // 중복  //주어진 객체가 저장되어 있는지 조사.  //문자열이 특정 문자열을 포함하고 있는지 확인한다. 포함하고 있으면 true를, 아니면 false를 반환하며, 대소문자를 구분한다.
 				 i--;  // 중복이면 다시 돈다.
 				 continue;  // skip하게 하는것.
 			 }
 			 
+			 
 			 // 문제
 			 quizIndex.add(randIndex); // 냈던 문제의 index 저장(중복 문제 내지 않기 위해)
-			 
-			 		 
-			 String country = keyList.get(randIndex);  // ** 
+					 		 
+			 String country = keyList.get(randIndex);  // **중요!!   변수에 담기.  // country :  capitalMap 키* + 랜덤
 			 System.out.print(country + "의 수도 이름은?");
 			 String answer = scan.next();  // 사용자가 입력한 정답
 			 
 			
-			 if (capitalMap.get(country).equals(answer)) {  // ** 
+			 if (capitalMap.get(country).equals(answer)) {  // **중요!!! map에서 답안 꺼내서 비교하기!!!  //답안 - map에서 뽑아내야 함. map과 답안 둘다 String 이라서,equals로 비교!
 				 System.out.println("정답");
 				 score += 100 / 5;
 			 } else {
@@ -104,12 +106,7 @@ public class Quiz01 {
 		 
 		 
 		 
-		 
-		 
-		 
-		 
-		 
-		 
+			 
 		 
 //			// "c"라는 키가 존재하는가?
 //			System.out.println(map1.containsKey("c"));

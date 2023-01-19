@@ -41,26 +41,26 @@ public class Quiz02 {
 
         // 책 이름 입력
         Scanner scan = new Scanner(System.in);
-        System.out.print("책이름을 입력해주세요: ");
+       // System.out.print("책이름을 입력해주세요: ");
         String searchBook = scan.nextLine(); // 사용자가 입력한 정답.
 
         
         
         // TODO: 구현하기
         
-         // ** 선생님
+         // ** 선생님 //  key를 뽑아서 반복문을 돌려야 된다.
         Iterator<String> iter = bookMap.keySet().iterator();  // set은 인덱스 없음
         while (iter.hasNext()) {
-        	String genre = iter.next();  // key !!!!
-        	// System.out.println(genre);
+        	String genre = iter.next();  // key !!!!  : genre
+        	 System.out.println(genre);
         	 
-        	Map<String, String> book = bookMap.get(genre);
-        	
-        	
-        	if (book.containsKey(searchBook)) {
+        	Map<String, String> book = bookMap.get(genre);  //  ** 핵심. 여기서는 bookMap.get(genre)도 이차원 map 이기 때문에, key : genre를 통해, value : Map< Sting, String> 알아내는 것.
+        	// 안쪽에 있는 map
+        	System.out.println(book);
+        	if (book.containsKey(searchBook)) {  // containsKey : 주어진 키가 있는지 여부를 확인.(key)
         	//if (book.get(searchBook) != null) {
         		//
-        		System.out.println(searchBook + "의 작가명은 " + book.get(searchBook));
+        	//	System.out.println(searchBook + "의 작가명은 " + book.get(searchBook));
         	}
         	
         	

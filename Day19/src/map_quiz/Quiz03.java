@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class Quiz03 {
 
@@ -54,8 +55,7 @@ public class Quiz03 {
 
 	        
 	        
-	        // 최대값 구하는 식 이용?
-	        
+	      
 	        
 //	        파티원 구하기
 //	        필요한 파티원의 정보를 출력하세요.
@@ -66,14 +66,29 @@ public class Quiz03 {
 //	        - myCharacter와 같은 서버의 "힐러" 직업을 가진 멤버 후보를 모두 출력한다.
 	        
 	        
-	        
-	        Iterator<> liter = charaters.iterator();	        
-	        while (iter.hasNext()) {
-	        	String  
-	        }
+	        // 1. 서버 B 찾기, 힐러 직업을 가진 멤버 찾아서 모두 출력
+	        // 2. 레벨이 가장 높은 사람 출력  - 최대값 구하는 식
 	        
 	        
 	        
-	    }
+	        String job = "힐러";
+	        String level = "B";	        
+	        // List	    
+	        Iterator<Map<String, String>> liter = charaters.iterator();	        
+	        while (liter.hasNext()) {
+	        	
+	        	Map<String, String>  partyOne = liter.next(); 
+	        		        	        	
+	        	if (partyOne.containsValue(job) && partyOne.containsValue(level)) {
+	        		System.out.println(partyOne);
+	        	} 
+	        	
+  
+	        } 	
+	        
+	        
+	  }// main
+
+	       
 
 }
