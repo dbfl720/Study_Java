@@ -24,7 +24,7 @@ public class Quiz02 {
 				int birthDate = scan.nextInt();
 				
 				// 객체 생성
-				Person person = new Person();
+				Person person = new Person();  // 반복문 안에 넣어야 됨. 사람 생성을 계속 해서..
 				person.setName(name);
 				person.setbirthDate(birthDate);
 				
@@ -41,13 +41,13 @@ public class Quiz02 {
 				
 
 				if (personList.isEmpty()) {
-					System.out.print("비어있습니다.");
+					System.out.println("비어있습니다.");
 					continue; 
 				}
 				Iterator<Person> iter = personList.iterator();
 				while (iter.hasNext()) {
-					 Person person = iter.next();
-					 System.out.println(person.toString()); // toString 생략 가능. 
+					 Person person = iter.next(); // Person person은 클래스 Person을 가리키는 거라 밑에 toString 사용 가능?
+					 System.out.println(person.toString()); // toString 생략 가능.  결국 toString()은 객체가 문자로 취급될 때 사용되는 메서드로 객체가 자신의 정체성을 드러내는 하나의 수단입니다.  
 				}
 				
 						
@@ -72,11 +72,11 @@ public class Quiz02 {
 				
 			} else if (num == 4) {
 				// 종료
-//				System.out.println("종료합니다.");
-//				break;  // 제일 가까이 있는 반복문을 빠져 나가는 것임.
+				System.out.println("종료합니다.");
+				break;  // 제일 가까이 있는 반복문을 빠져 나가는 것임.
 			} else {
 				// 잘못
-			//	System.out.println("잘못 입력하셨습니다.");
+				System.out.println("잘못 입력하셨습니다.");
 			}
 		}
 

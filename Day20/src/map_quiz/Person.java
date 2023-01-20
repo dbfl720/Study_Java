@@ -33,7 +33,7 @@ public class Person {
 	
 	
 	@Override
-	public String toString() {
+	public String toString() {	// String을 단순 Object에 포함된 메서드가 아닌 Student에 들어있는 각필드 값들의 정보를 문자열로 출력할 수 있도록 재정의 하였다.
 		return "이름 : " + this.name + ", 생년월일: " + this.birthDate;
 	}
 }
