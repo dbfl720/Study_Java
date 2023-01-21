@@ -71,14 +71,15 @@ public class Market {
 						System.out.println("수정할 상품이 존재하지 않습니다.");
 					} else {
 						System.out.println("가격을 수정해주세요: ");
-						int price = scan.nextInt();
-						goodsList.add(goods);
+						int price = scan.nextInt();					
 						System.out.println("판매 상태를 수정해주세요: ");
 						String state = scan.next();
 						goodsList.add(goods);
 						break;
 					} 
-				}
+					
+				} 
+				
 			} else if (num == 4) {
 				System.out.println("삭제할 상품명을 입력하세요: ");
 				String findGoodsName = scan.next();
