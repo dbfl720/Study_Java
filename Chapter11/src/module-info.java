@@ -5,5 +5,5 @@
  * @author hongyuri
  *
  */
-module Chapter11_hashCode {
+module Chapter11 {
 }
