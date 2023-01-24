@@ -4,7 +4,7 @@ public class Animals implements Runnable{
 
 	private String tiger;
 	
-	public Animals (String tiger) {
+	public Animals (String tiger) { // 생성자.
 		this.tiger = tiger;
 	}
 	
