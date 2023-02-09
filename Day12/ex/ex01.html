@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Change 이벤트</title>
+
+         <!-- jquery cdn link -->
+         <script
+         src="https://code.jquery.com/jquery-3.6.3.js"
+         integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+         crossorigin="anonymous"></script>
+ 
+          <!-- <link rel="stylesheet" type="text/css" href="quiz01_style.css"> -->
+    </head>
+    <body>
+        좋아하는 동물을 하나만 선택하세요:
+        <!-- name이 같으면 하나의 그룹임. -->
+        <!-- checked : 먼저 선택 되어짐. -->
+        <label><input type="radio" name="animal" id="dog" value="dog" checked="checked">개</label>
+        <label><input type="radio" name="animal" id="cat" value="cat">고양이</label>
+        <label><input type="radio" name="animal" id="lion" value="lion">사자</label>  
+        <br><br>
+
+
+        <button type="button" id="likeCatBtn">고양이를 선택하는 버튼</button>
+        <br>
+        <button type="button" id="likeCancelBtn">선택 해제 버튼</button>
+        <hr>
+
+        주소 이동:
+        <select id="site">
+            <option>--선택하기--</option>
+            <option value="naver">네이버</option>
+            <option value="daum">다음</option>
+            <option value="google">구글</option>
+            <option value="nate">네이트</option>
+        </select>
+
+
+
+        <!-- 주로 body에 씀. -->
+        <script>
+            $(document).ready(function() {
+                // 1) radio
+                // input태그를 가져오고 그 중에서 name이 animal인 것을 가져온다.
+                // 변경이 일어날때 마다 뜬다.
+                // 내가 무엇을 선택했는지 알려줌.
+                $("input[name=animal]").on("change", function() {
+                    // check된 값 찾기
+                    let checkedValue = $("input[name=animal]:checked").val();
+                    alert(checkedValue);
+                }); // -- 1번 끝
+
+
+
+                // 고양이를 선택하는 버튼
+                // checked를 자동으로 변경하는 방법
+                // attr(), prop() 구분해야함!!! ????
+                $("#likeCatBtn").on("click", function() {
+                    $("#cat").prop("checked", true);
+                });
+
+
+                // 선택 해제 버튼
+                $("#likeCancelBtn").on("click", function() {
+                    // 이름이 animal 모든 input의 checked property 제거
+                    // 태그 안쪽에 키와 벨류는 어트리뷰트
+                    // 하나만 있을때는 프로퍼티
+                    $("input[name=animal]").prop("checked", false);
+                });
+
+
+                // (2) select 태그
+                // value가 우선 적용됨..
+                $("#site").on("change", function() {
+                    let site = $("#site").val();
+                   // alert(site);
+
+                   // 새로고침
+                   //location.reload(true);
+
+
+
+                   if (site == "naver") {
+                        location.href = "https://naver.com";
+                   } else if (site == "daum") {
+                    location.href = "https://daum.net";
+                   } else if (site == "google") {
+                    location.href = "https://google.com";
+                   } else if (site =="nate") {
+                    location.href = "https://nate.com";
+                   }
+
+                })  // --- 2 끝
+
+
+
+            
+
+
+
+            }); // --- ready 끝
+        </script>
+    </body>
+</html>

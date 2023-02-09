@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>선생님 코드 동적 태그 다루기 (2)</title>
+
+        <!-- jquery cdn link -->
+        <script
+        src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+        crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" type="text/css" href="quiz01_style.css">
+    </head>
+    <body>
+        <h1>1.색 바꾸기</h1>
+        <div id="box" ></div>
+        <select id="colorSelect">
+            <option>--색 선택--</option>
+            <option value="blue">파란색</option>
+            <option value="red">빨간색</option>
+            <option value="green">녹색</option>
+            <option value="purple">자두색</option>
+        </select>
+
+
+        <h1>2. 입력 바꾸기</h1>
+
+        <label>학생<input type="radio" name="job" id="student" value="student" checked></label>
+        
+        <label>직장인<input type="radio" name="job" id="worker" value="worker"></label>
+        <div>
+            <span id="jobName">학교명</span> 
+            <input type="text"></input>
+        </div>
+
+        
+
+        <h1>3. 전체 선택</h1>
+        <!-- 네모모양 checkbox -->
+        <label>전체 선택<input type="checkbox" id="allCheck"></label>
+        <div>
+            <!-- 3개가 동일한 그룹으로 있어야 하기 때문에 name을 씀. -->
+            <label>개인정보 활용 동의<input type="checkbox" name="agree" value="agree1"></label>
+            <label>서비스 이용 동의<input type="checkbox" name="agree" value="agree2"></label>
+            <label>마케팅 활용 동의<input type="checkbox" name="agree" value="agree3"></label>
+        </div>
+
+
+        <h1>4. 길이 제한</h1>
+        <input type="text" id="textBox" class="textCount"></input>
+        
+
+        
+        <script>
+            $(document).ready(function() {
+
+                // 1.
+                $('#colorSelect').on("change", function() {
+                    // select 아이디를 통해 값을 불러오는 방법.
+                    let color = $("#colorSelect").val();
+                  // alert(color);
+
+                //    **** css의 background 컬러색을 바꾸는 방법
+                    // if (color == "빨간색") {
+                    //     $('#box').css("background-color", "red");
+                    // }
+
+                    // value명을 컬러색과 동일하게 만들어서 if문을 생략하고 간단히 한 줄로 만듬.
+                    $('#box').css("background-color", color);
+                });  // --- 1번 끝
+
+                  
+
+
+                // // 2.
+                // //    text면 text(),  밸류면 val()
+                // toggle() : ((add(), remove()) on / off)switch의 개념. if - else 있어야 됨.
+
+                $("input[name=job]").on('change', function() {
+                   let job = $('input[name=job]:checked').val();
+                   
+                
+                   if (job == "student") {  // 여기서 student는 밸류임.
+                        $("#jobName").text("학교명");
+                   } else {
+                       $("#jobName").text("직장명");
+
+                    }
+                });  // --- 2번 끝
+                         
+
+             
+
+                // // 3.
+                // ***** jquery check 박스에 체크 됬는지 확인. - 검색하기!!!!
+                // // selector로 잡은 이벤트의 대상과 이름이 같을 때는 this로 변경!!
+                $('#allCheck').on("change", function() {
+
+                    // 체크가 되어있는지 확인하는 함수 : is()
+                //    if ($(this).is(":checked")) {
+                //     $("input[name=agree]").prop("checked", true);
+                //    } else {
+                //     $("input[name=agree]").prop("checked", false);
+                //    }
+
+                // $(this)와 $('#allCheck')는 같다.
+                // if문 한 줄로 요약.
+                 $("input[name=agree]").prop("checked", $(this).is(":checked"));
+                
+                });  // -- 3번 끝
+
+
+
+                // 4.
+                $('#textBox').keyup(function () {
+                    
+                    let content = $(this).val();
+
+                    // 글자수 세기
+                    // if (content.leng == 0 || content == ' ') {
+                    //     $('.textCount').text('0자');
+                    // } else {
+                    //     $('.textCount').text(content.length + '자');
+                    // }
+
+
+                    // 글자수 제한
+                    if (content.length > 5) {
+                        // 200자 부터는 타이핑 되지 않도록
+                        $(this).val($(this).val().substring(0,5));
+
+                        //200자 넘으면 알림창 뜨도록
+                        alert("다섯자를 초과하여 입력할 수 없습니다.");
+                    }
+
+
+                }); //-- 4 끝
+
+
+            }); // -- ready 끝
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
