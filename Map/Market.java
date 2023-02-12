@@ -4,15 +4,17 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+
+// 물품 리스트 관리.  CRUD 메소드 모음. // 필드, 메소드.
 public class Market {
 
 	// 필드..?
-	private List<Goods> goodsList; // ?????? List<Goods>
+	private List<Goods> goodsList; 
 	
 	
 	// 생성자
 	public Market() {
-		this.goodsList = new ArrayList<>();  // ???? new ArrayList<>() ??????
+		this.goodsList = new ArrayList<>();  
 	}
 	
 	// 상품 추가

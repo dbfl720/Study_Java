@@ -1,5 +1,6 @@
 package Map;
 
+// '나' 이곳에서 마켓을 통해 물건을 CRUD 할 수 있게 구현! 
 public class MarketTest {
 
 	public static void main(String[] args) {

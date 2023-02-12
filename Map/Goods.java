@@ -1,5 +1,7 @@
 package Map;
 
+
+// 필드, getter, setter (데이터만 담음)
 public class Goods {
 	// 필드
 	private String name;
