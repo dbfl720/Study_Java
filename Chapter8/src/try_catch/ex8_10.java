@@ -6,8 +6,9 @@ public class ex8_10 {
 
 	public static void main(String[] args) {
 		// 메서드에 예외 선언하기 2
+		// main - 예외 처리 // createFile 클래스 - 예외 선언
 		try {
-			File f = createFile("test2.text");
+			File f = createFile("");
 			System.out.println(f.getName() + "파일이 성공적으로 생성되었습니다.");
 		} catch (Exception e) {  // try - catch로 예외 처리.
 			System.out.println(e.getMessage() + "다시 입력해주시기 바랍니다.");

@@ -9,9 +9,9 @@ public class Ex8_3 {
 		
 		try {
 			System.out.println(3);
-			System.out.println(0/0);
+			System.out.println(0/0); // 고의로 ArithmeticException 발생.
 			System.out.println(4);  // 실행되지 않는다.
-		} catch (Exception e) {	//ArithmeticException 대신 Exception을 사
+		} catch (Exception e) {	//ArithmeticException 대신 Exception을 사용. (Exception은 조상)
 			System.out.println(5);
 		} // try-catch 
 		System.out.println(6);
