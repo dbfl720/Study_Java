@@ -14,7 +14,7 @@ package Chapter9;
 			this.number = number;
 		}
 		
-		public String toString() {
+		public String toString() {  // 오버라이딩
 			return "kind : " + kind + ", number : " + number;  // Card2	인스턴스의 kind와 number를 문자열로 반환.
 		}
 	}
