@@ -5,13 +5,11 @@ public class ex13_1 {
 		// 쓰레드의 구현과 실행
 		ThreadEx1_1 t1 = new ThreadEx1_1();
 		
-		Runnable r = new ThreadEx1_2();
-		Thread t2 = new Thread(r);  // 생성자 Thread(Runnable target)
+		Runnable r = new ThreadEx1_2();  // Runnable인터페이스를 구현한 클래스의 인스턴스를 생성한 다음, Thread클래스의 생성자의 매개변수로 제공해야 한다.
+		Thread t2 = new Thread(r);  // 생성자 Thread(Runnable target) // Thread t2 = new Thread(new ThreadEx1_2()); 두 줄을 한 줄로 간단히.
 		
-		t1.start();
+		t1.start();  // 쓰레드 호출 start()
 		t2.start();
-
-	}
 
 }
 
