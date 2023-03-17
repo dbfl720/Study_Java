@@ -1,0 +1,1 @@
+INDEX VERSION 1.131+/Users/hongyuri/Desktop/자바의 정석/Chapter2/src/Chapter2/.metadata/.plugins/org.eclipse.jdt.core
