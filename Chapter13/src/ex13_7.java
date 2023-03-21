@@ -24,7 +24,7 @@ public class ex13_7 implements Runnable{
 		public void run() {
 			while(true) {
 				try {
-					Thread.sleep(3 * 1000);  // 3초마
+					Thread.sleep(3 * 1000);  // 3초마다
 				} catch (InterruptedException e) {}
 				
 				// autoSave의 값이 true이면 autoSave()를 호출한다.
